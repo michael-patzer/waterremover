@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Remover, Speaker Cleaner | Remove Water from iPhone Speaker | iOS App</title>
+    <meta name="description" content="Water stuck in your iPhone speaker? Clear it instantly with scientifically-tuned audio frequencies. Water Remover uses powerful sound waves to eject water droplets from your device.">
+    <meta name="keywords" content="water remover, speaker cleaner, iPhone water damage, water eject, speaker water removal, audio frequencies, iPhone repair, water removal app">
+    <meta name="author" content="Mobile Card Games & Travel Apps LLC">
+    <meta name="robots" content="index, follow">
+    <meta name="apple-itunes-app" content="app-id=6748860044">
+    <link rel="canonical" href="https://mobilegames.cloud/waterremover/index.html">
+    <link rel="icon" href="images/app-icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/app-icon.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mobilegames.cloud/waterremover/index.html">
+    <meta property="og:title" content="Water Remover, Speaker Cleaner | Fix Water-Damaged iPhone Speakers">
+    <meta property="og:description" content="Remove water from your iPhone speaker instantly with scientifically-tuned sound waves. Free app with multiple frequency modes.">
+    <meta property="og:image" content="https://mobilegames.cloud/waterremover/images/app-icon.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mobilegames.cloud/waterremover/index.html">
+    <meta property="twitter:title" content="Water Remover, Speaker Cleaner | Fix Water-Damaged iPhone Speakers">
+    <meta property="twitter:description" content="Remove water from your iPhone speaker instantly with scientifically-tuned sound waves. Free app with multiple frequency modes.">
+    <meta property="twitter:image" content="https://mobilegames.cloud/waterremover/images/app-icon.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "Water Remover, Speaker Cleaner",
+      "operatingSystem": "iOS",
+      "applicationCategory": "UtilitiesApplication",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "3"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      },
+      "url": "https://apps.apple.com/app/apple-store/id6748860044",
+      "description": "Water stuck in your iPhone speaker? Clear it instantly with scientifically-tuned audio frequencies. Water Remover uses powerful sound waves to eject water droplets from your device.",
+      "applicationSubCategory": "Utilities",
+      "datePublished": "2024-12-01",
+      "author": {
+        "@type": "Organization",
+        "name": "Mobile Card Games & Travel Apps LLC"
+      }
+    }
+    </script>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Global Variables */
+        :root {
+            --primary-color: #0EA5E9;
+            --primary-hover: #0284C7;
+            --primary-light: #F0F9FF;
+            --dark-text: #1F2937;
+            --gray-text: #6B7280;
+            --light-gray: #E5E7EB;
+            --white: #FFFFFF;
+            --gradient: linear-gradient(135deg, #0EA5E9 0%, #06B6D4 100%);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --rounded: 12px;
+            --rounded-lg: 16px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        }
+        
+        body {
+            color: var(--dark-text);
+            line-height: 1.6;
+            background: var(--white);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        h1, h2, h3, h4 {
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.3);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            height: 70px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo img {
+            height: 48px;
+            border-radius: var(--rounded);
+            box-shadow: var(--shadow);
+        }
+        
+        .logo h1 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--dark-text);
+        }
+        
+        .download-btn {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--rounded);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 140px 0 80px;
+            background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--gray-text);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .app-store-btn {
+            display: inline-block;
+            background: var(--gradient);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: var(--rounded-lg);
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .app-store-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 25px -5px rgba(14, 165, 233, 0.3);
+        }
+        
+        .qr-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--white);
+            color: var(--gray-text);
+            padding: 1rem 1.5rem;
+            border-radius: var(--rounded-lg);
+            border: 2px solid var(--light-gray);
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .qr-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--dark-text);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--rounded-lg);
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--light-gray);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--white);
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+        }
+        
+        .feature-card p {
+            color: var(--gray-text);
+            line-height: 1.6;
+        }
+        
+        /* Screenshots Section */
+        .screenshots {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        
+        .screenshots h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark-text);
+        }
+        
+        .section-description {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--gray-text);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+        
+        .screenshot-gallery {
+            display: flex;
+            overflow-x: auto;
+            gap: 2rem;
+            padding: 2rem 0;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .screenshot-gallery::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .screenshot-gallery::-webkit-scrollbar-track {
+            background: var(--light-gray);
+            border-radius: 4px;
+        }
+        
+        .screenshot-gallery::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+        
+        .screenshot-item {
+            flex: 0 0 auto;
+            text-align: center;
+            min-width: 200px;
+        }
+        
+        .screenshot-item img {
+            width: 200px;
+            height: auto;
+            border-radius: var(--rounded-lg);
+            box-shadow: var(--shadow-lg);
+            transition: transform 0.3s ease;
+        }
+        
+        .screenshot-item img:hover {
+            transform: scale(1.05);
+        }
+        
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 80px 0;
+            background: var(--primary-light);
+        }
+        
+        .how-it-works h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--dark-text);
+        }
+        
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .step {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--rounded-lg);
+            text-align: center;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .step h3 {
+            margin: 1rem 0;
+            color: var(--dark-text);
+        }
+        
+        .step p {
+            color: var(--gray-text);
+        }
+        
+        /* QR Code Section */
+        .qr-section {
+            padding: 80px 0;
+            background: var(--white);
+            text-align: center;
+        }
+        
+        .qr-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-text);
+        }
+        
+        .qr-section p {
+            font-size: 1.1rem;
+            color: var(--gray-text);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .qr-container {
+            max-width: 300px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--rounded-lg);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--light-gray);
+        }
+        
+        .qr-container img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--rounded);
+        }
+        
+        .qr-container p {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: var(--gray-text);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-text);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        footer p {
+            margin-bottom: 1rem;
+        }
+        
+        footer a {
+            color: var(--primary-color);
+            margin: 0 1rem;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .features h2,
+            .screenshots h2,
+            .how-it-works h2,
+            .qr-section h2 {
+                font-size: 2rem;
+            }
+            
+            .screenshot-gallery {
+                padding: 1rem 0;
+                gap: 1.5rem;
+            }
+            
+            .screenshot-item {
+                min-width: 180px;
+            }
+            
+            .screenshot-item img {
+                width: 180px;
+            }
+            
+            .nav-container {
+                padding: 0.5rem 0;
+            }
+            
+            .logo h1 {
+                font-size: 1.1rem;
+            }
+            
+            .download-btn {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .hero {
+                padding: 120px 0 60px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .features,
+            .screenshots,
+            .how-it-works,
+            .qr-section {
+                padding: 60px 0;
+            }
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal-content {
+            background-color: var(--white);
+            margin: 10% auto;
+            padding: 2rem;
+            border-radius: var(--rounded-lg);
+            width: 90%;
+            max-width: 500px;
+            box-shadow: var(--shadow-lg);
+            animation: modalSlideIn 0.3s ease;
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .close {
+            color: var(--gray-text);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .close:hover {
+            color: var(--dark-text);
+        }
+        
+        .modal h3 {
+            margin-bottom: 1rem;
+            text-align: center;
+            color: var(--dark-text);
+        }
+        
+        .sms-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .sms-form input {
+            padding: 0.75rem;
+            border: 2px solid var(--light-gray);
+            border-radius: var(--rounded);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .sms-form input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .sms-form button {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 0.75rem;
+            border: none;
+            border-radius: var(--rounded);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .sms-form button:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav-container">
+                <div class="logo">
+                    <img src="images/app-icon.png" alt="Water Remover App Icon">
+                    <h1>Water Remover</h1>
+                </div>
+                <a href="https://apps.apple.com/app/apple-store/id6748860044?pt=649248&ct=website&mt=8" class="download-btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-download"></i> Download Free
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Remove Water from Your Speaker</h1>
+                <p>Water stuck in your iPhone speaker? Clear it instantly with scientifically-tuned audio frequencies designed to eject water droplets safely and effectively.</p>
+                <div class="hero-buttons">
+                    <a href="https://apps.apple.com/app/apple-store/id6748860044?pt=649248&ct=website&mt=8" class="app-store-btn" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-apple"></i> Download on App Store
+                    </a>
+                    <button class="qr-btn" onclick="showQRModal()">
+                        <i class="fas fa-qrcode"></i> Get QR Code
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="screenshots">
+            <div class="container">
+                <h2>See Water Remover in Action</h2>
+                <p class="section-description">Simple, intuitive interface designed for quick water removal from your iPhone speaker.</p>
+                <div class="screenshot-gallery">
+                    <div class="screenshot-item">
+                        <img src="images/screenshot1.png" alt="Water Remover app screenshot" loading="lazy">
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="images/screenshot2.png" alt="Water Remover app screenshot" loading="lazy">
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="images/screenshot3.png" alt="Water Remover app screenshot" loading="lazy">
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="images/screenshot4.png" alt="Water Remover app screenshot" loading="lazy">
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="images/screenshot5.png" alt="Water Remover app screenshot" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Powerful Water Removal Technology</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-volume-up"></i>
+                        </div>
+                        <h3>Scientific Audio Frequencies</h3>
+                        <p>Uses precisely calibrated sound waves at optimal frequencies to create vibrations that push water out of your speaker effectively.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>All iPhone Models</h3>
+                        <p>Compatible with all iPhone models from iPhone 5s to the latest releases. Works on iPad and iPod touch too.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Instant Results</h3>
+                        <p>One-tap activation provides immediate water removal. No complex setup or technical knowledge required.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Safe & Tested</h3>
+                        <p>Completely safe audio frequencies that won't damage your device. Tested on thousands of devices with 5-star ratings.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-sliders-h"></i>
+                        </div>
+                        <h3>Multiple Frequency Modes</h3>
+                        <p>Choose from different frequency modes for optimal water removal based on your specific situation.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>32 Languages</h3>
+                        <p>Available in 32 languages including English, Spanish, French, German, and many more.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <div class="container">
+                <h2>How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Open the App</h3>
+                        <p>Launch Water Remover on your iPhone or iPad</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Choose Frequency</h3>
+                        <p>Select the optimal frequency mode for your device</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Tap to Start</h3>
+                        <p>One tap activates the water removal process</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Water Removed</h3>
+                        <p>Watch as water droplets are ejected from your speaker</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="qr-section">
+            <div class="container">
+                <h2>Quick Download</h2>
+                <p>Scan this QR code with your iPhone camera to download Water Remover instantly from the App Store.</p>
+                <div class="qr-container">
+                    <img src="images/qrcode.png" alt="QR Code to download Water Remover app">
+                    <p>Point your iPhone camera at this code</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Water Remover, Speaker Cleaner © 2024 Mobile Card Games & Travel Apps LLC</p>
+            <p>Compatible with iOS 17.0 or later</p>
+        </div>
+    </footer>
+
+    <!-- QR Code Modal -->
+    <div id="qrModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeQRModal()">&times;</span>
+            <h3>Download Water Remover</h3>
+            <div style="text-align: center; margin: 2rem 0;">
+                <img src="images/qrcode.png" alt="QR Code" style="max-width: 200px; border-radius: var(--rounded);">
+                <p style="margin-top: 1rem; color: var(--gray-text);">Scan with your iPhone camera</p>
+            </div>
+            <div style="text-align: center;">
+                <a href="https://apps.apple.com/app/apple-store/id6748860044?pt=649248&ct=website&mt=8" 
+                   class="app-store-btn" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-apple"></i> Open App Store
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SMS Modal -->
+    <div id="smsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSMSModal()">&times;</span>
+            <h3>Get Download Link via SMS</h3>
+            <form class="sms-form" onsubmit="sendSMS(event)">
+                <input type="tel" id="phoneInput" placeholder="Enter your phone number" required>
+                <button type="submit">Send Download Link</button>
+            </form>
+            <div id="smsStatus" style="text-align: center; margin-top: 1rem;"></div>
+        </div>
+    </div>
+
+    <script>
+        // QR Modal Functions
+        function showQRModal() {
+            document.getElementById('qrModal').style.display = 'block';
+        }
+        
+        function closeQRModal() {
+            document.getElementById('qrModal').style.display = 'none';
+        }
+        
+        function showSMSModal() {
+            document.getElementById('smsModal').style.display = 'block';
+        }
+        
+        function closeSMSModal() {
+            document.getElementById('smsModal').style.display = 'none';
+        }
+        
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            const qrModal = document.getElementById('qrModal');
+            const smsModal = document.getElementById('smsModal');
+            if (event.target === qrModal) {
+                qrModal.style.display = 'none';
+            }
+            if (event.target === smsModal) {
+                smsModal.style.display = 'none';
+            }
+        }
+        
+        // SMS Function
+        async function sendSMS(event) {
+            event.preventDefault();
+            const phone = document.getElementById('phoneInput').value;
+            const statusDiv = document.getElementById('smsStatus');
+            
+            statusDiv.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            
+            try {
+                const response = await fetch('https://your-twilio-service-url/send-sms', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        phone: phone,
+                        appName: 'Water Remover, Speaker Cleaner',
+                        appLink: 'https://apps.apple.com/app/apple-store/id6748860044?pt=649248&ct=sms&mt=8'
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    statusDiv.innerHTML = '<i class="fas fa-check" style="color: green;"></i> SMS sent successfully!';
+                    setTimeout(closeSMSModal, 2000);
+                } else {
+                    statusDiv.innerHTML = '<i class="fas fa-times" style="color: red;"></i> Failed to send SMS. Please try again.';
+                }
+            } catch (error) {
+                statusDiv.innerHTML = '<i class="fas fa-times" style="color: red;"></i> Error sending SMS. Please try again.';
+            }
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add loading animation to app store buttons
+        document.querySelectorAll('.app-store-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Opening App Store...';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:itunes.apple.com)",
+      "Bash(python:*)",
+      "Bash(mkdir:*)",
+      "WebFetch(domain:apps.apple.com)"
+    ],
+    "deny": []
+  }
+}
