@@ -10,6 +10,17 @@
     <meta name="robots" content="index, follow">
     <meta name="apple-itunes-app" content="app-id=6748860044">
     <link rel="canonical" href="https://getwateroutofphone.com/">
+    <script>
+        // Enforce the canonical host to avoid duplicate URLs (e.g., GitHub Pages fallback domain)
+        (function() {
+            var canonicalHost = "getwateroutofphone.com";
+            var isLocal = /^(localhost|127\.0\.0\.1)/.test(window.location.hostname);
+            if (!isLocal && window.location.hostname !== canonicalHost) {
+                var target = "https://" + canonicalHost + window.location.pathname + window.location.search + window.location.hash;
+                window.location.replace(target);
+            }
+        })();
+    </script>
     <link rel="icon" href="images/app-icon.png" type="image/png">
     <link rel="apple-touch-icon" href="images/app-icon.png">
     
